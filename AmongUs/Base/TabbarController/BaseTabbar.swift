@@ -33,7 +33,8 @@ class BaseTabbar: UITabBarController {
         let settingNav = BaseNV(rootViewController: settingVC)
         settingNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "iconsSetting"), selectedImage: #imageLiteral(resourceName: "iconsSetting"))
                 
-        self.viewControllers = [homeNav, wallNav, stickerNav, settingNav]
+//        self.viewControllers = [homeNav, wallNav, stickerNav, settingNav]
+        self.viewControllers = [homeNav, settingNav]
         self.tabBar.isTranslucent = true
         self.tabBar.tintColor = UIColor.white
         self.tabBar.unselectedItemTintColor = UIColor.white.withAlphaComponent(0.3)
