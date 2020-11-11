@@ -13,7 +13,11 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
-    
+}
 
+extension BaseVC: UIGestureRecognizerDelegate {
+    
 }

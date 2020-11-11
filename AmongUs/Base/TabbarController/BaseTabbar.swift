@@ -52,3 +52,12 @@ class BaseTabbar: UITabBarController {
         imageView.layer.add(CAAnimation().bounceAnimation(), forKey: nil)
     }
 }
+
+extension UITabBar {
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        super.sizeThatFits(size)
+        var sizeThatFits = super.sizeThatFits(size)
+        sizeThatFits.height = 70 // or whatever height you need
+        return sizeThatFits
+   }
+}

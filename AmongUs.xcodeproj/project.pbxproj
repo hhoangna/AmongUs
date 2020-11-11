@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF57255C1FFE00C72F7B /* HomeHeaderCell.swift */; };
+		A394CF5A255C1FFE00C72F7B /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A394CF58255C1FFE00C72F7B /* HomeHeaderCell.xib */; };
+		A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */; };
+		A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A394CF5F255C206300C72F7B /* AmaticSC-Bold.ttf */; };
+		A394CF65255C222A00C72F7B /* HomeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF63255C222A00C72F7B /* HomeTitleCell.swift */; };
+		A394CF66255C222A00C72F7B /* HomeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A394CF64255C222A00C72F7B /* HomeTitleCell.xib */; };
+		A394CF6A255C245400C72F7B /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF68255C245400C72F7B /* HomeItemCell.swift */; };
+		A394CF6B255C245400C72F7B /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A394CF69255C245400C72F7B /* HomeItemCell.xib */; };
+		A394CF72255C478E00C72F7B /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF71255C478E00C72F7B /* CreateVC.swift */; };
 		A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */; };
 		A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */; };
 		A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BBC303255AF82E0092CFBE /* Main.storyboard */; };
@@ -39,6 +48,15 @@
 
 /* Begin PBXFileReference section */
 		09CAAD2D0D7124DA14EA0445 /* Pods-AmongUs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmongUs.debug.xcconfig"; path = "Target Support Files/Pods-AmongUs/Pods-AmongUs.debug.xcconfig"; sourceTree = "<group>"; };
+		A394CF57255C1FFE00C72F7B /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		A394CF58255C1FFE00C72F7B /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		A394CF5F255C206300C72F7B /* AmaticSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Bold.ttf"; sourceTree = "<group>"; };
+		A394CF63255C222A00C72F7B /* HomeTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleCell.swift; sourceTree = "<group>"; };
+		A394CF64255C222A00C72F7B /* HomeTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTitleCell.xib; sourceTree = "<group>"; };
+		A394CF68255C245400C72F7B /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		A394CF69255C245400C72F7B /* HomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
+		A394CF71255C478E00C72F7B /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
 		A3BBC2FA255AF82E0092CFBE /* AmongUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmongUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +108,61 @@
 				09CAAD2D0D7124DA14EA0445 /* Pods-AmongUs.debug.xcconfig */,
 				FE916D2E6F7E22972CD56C03 /* Pods-AmongUs.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A394CF53255C1C2700C72F7B /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF56255C1FC600C72F7B /* HomeItemCell */,
+				A394CF55255C1FAA00C72F7B /* HomeTitleCell */,
+				A394CF54255C1F8500C72F7B /* HomeHeaderCell */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		A394CF54255C1F8500C72F7B /* HomeHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF57255C1FFE00C72F7B /* HomeHeaderCell.swift */,
+				A394CF58255C1FFE00C72F7B /* HomeHeaderCell.xib */,
+			);
+			path = HomeHeaderCell;
+			sourceTree = "<group>";
+		};
+		A394CF55255C1FAA00C72F7B /* HomeTitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF63255C222A00C72F7B /* HomeTitleCell.swift */,
+				A394CF64255C222A00C72F7B /* HomeTitleCell.xib */,
+			);
+			path = HomeTitleCell;
+			sourceTree = "<group>";
+		};
+		A394CF56255C1FC600C72F7B /* HomeItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF68255C245400C72F7B /* HomeItemCell.swift */,
+				A394CF69255C245400C72F7B /* HomeItemCell.xib */,
+			);
+			path = HomeItemCell;
+			sourceTree = "<group>";
+		};
+		A394CF5D255C205100C72F7B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF5F255C206300C72F7B /* AmaticSC-Bold.ttf */,
+				A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A394CF70255C477300C72F7B /* CreateVC */ = {
+			isa = PBXGroup;
+			children = (
+				A394CF71255C478E00C72F7B /* CreateVC.swift */,
+			);
+			path = CreateVC;
 			sourceTree = "<group>";
 		};
 		A3BBC2F1255AF82E0092CFBE = {
@@ -148,6 +219,7 @@
 		A3BBC314255AF87F0092CFBE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A394CF70255C477300C72F7B /* CreateVC */,
 				A3BBC323255AF95F0092CFBE /* SettingVC */,
 				A3BBC322255AF95A0092CFBE /* StickerVC */,
 				A3BBC321255AF9500092CFBE /* WallpaperVC */,
@@ -166,6 +238,7 @@
 		A3BBC316255AF8990092CFBE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A394CF5D255C205100C72F7B /* Fonts */,
 				A3BBC357255AFB4A0092CFBE /* Manager */,
 				A3BBC337255AFB350092CFBE /* Extensions */,
 				A3BBC31C255AF8E80092CFBE /* Plists */,
@@ -233,6 +306,7 @@
 		A3BBC320255AF9440092CFBE /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				A394CF53255C1C2700C72F7B /* HomeCell */,
 				A3BBC325255AFA1A0092CFBE /* HomeVC.swift */,
 			);
 			path = HomeVC;
@@ -357,8 +431,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A394CF66255C222A00C72F7B /* HomeTitleCell.xib in Resources */,
+				A394CF6B255C245400C72F7B /* HomeItemCell.xib in Resources */,
+				A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */,
 				A3BBC30A255AF82F0092CFBE /* LaunchScreen.storyboard in Resources */,
+				A394CF5A255C1FFE00C72F7B /* HomeHeaderCell.xib in Resources */,
 				A3BBC307255AF82F0092CFBE /* Assets.xcassets in Resources */,
+				A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */,
 				A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,12 +477,14 @@
 				A3BBC326255AFA1A0092CFBE /* HomeVC.swift in Sources */,
 				A3BBC32F255AFA430092CFBE /* SettingVC.swift in Sources */,
 				A3BBC349255AFB350092CFBE /* UIFont+Ext.swift in Sources */,
+				A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */,
 				A3BBC34F255AFB350092CFBE /* String+Ext.swift in Sources */,
 				A3BBC352255AFB350092CFBE /* CAAnimation+Ext.swift in Sources */,
 				A3BBC348255AFB350092CFBE /* UITabbarItem+Ext.swift in Sources */,
 				A3BBC34A255AFB350092CFBE /* UIApplication+Ext.swift in Sources */,
 				A3BBC34B255AFB350092CFBE /* UITextView+Ext.swift in Sources */,
 				A3BBC335255AFA8D0092CFBE /* BaseTabbar.swift in Sources */,
+				A394CF72255C478E00C72F7B /* CreateVC.swift in Sources */,
 				A3BBC34C255AFB350092CFBE /* UIImage+Ext.swift in Sources */,
 				A3BBC329255AFA280092CFBE /* WallpaperVC.swift in Sources */,
 				A3BBC35D255AFBA20092CFBE /* BaseNV.swift in Sources */,
@@ -412,6 +493,7 @@
 				A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */,
 				A3BBC354255AFB350092CFBE /* UIViewController+Ext.swift in Sources */,
 				A3BBC34E255AFB350092CFBE /* Font+Ext.swift in Sources */,
+				A394CF6A255C245400C72F7B /* HomeItemCell.swift in Sources */,
 				A3BBC332255AFA730092CFBE /* BaseVC.swift in Sources */,
 				A3BBC350255AFB350092CFBE /* UIColor+Ext.swift in Sources */,
 				A3BBC347255AFB350092CFBE /* IBDesignable+Ext.swift in Sources */,
@@ -419,6 +501,7 @@
 				A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */,
 				A3BBC353255AFB350092CFBE /* UserDefaults+Ext.swift in Sources */,
 				A3BBC359255AFB5A0092CFBE /* Constants.swift in Sources */,
+				A394CF65255C222A00C72F7B /* HomeTitleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
