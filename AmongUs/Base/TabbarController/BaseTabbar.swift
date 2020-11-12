@@ -15,6 +15,12 @@ class BaseTabbar: UITabBarController {
         // Do any additional setup after loading the view.
         setupTabbar()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBar.frame.size.height = view.safeAreaInsets.bottom + 56
+        tabBar.frame.origin.y = view.frame.height - (view.safeAreaInsets.bottom + 56)
+    }
 
     func setupTabbar() {
         let homeVC: HomeVC = .load(SB: .Main)

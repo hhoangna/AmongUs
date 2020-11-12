@@ -158,6 +158,15 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        let sec = Section(rawValue: indexPath.section)
+        
+        switch sec {
+        case .Temple:
+            let vc: CreateVC = .load(SB: .Main)
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
     }
 }

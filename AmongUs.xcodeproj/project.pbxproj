@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A331B8B1255D2A2000C66A30 /* CreateCharaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331B8AF255D2A2000C66A30 /* CreateCharaterCell.swift */; };
+		A331B8B2255D2A2000C66A30 /* CreateCharaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A331B8B0255D2A2000C66A30 /* CreateCharaterCell.xib */; };
+		A331B8B8255D46F000C66A30 /* CreateTextSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331B8B6255D46F000C66A30 /* CreateTextSizeCell.swift */; };
+		A331B8B9255D46F000C66A30 /* CreateTextSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A331B8B7255D46F000C66A30 /* CreateTextSizeCell.xib */; };
+		A3660413255CF591006E8F38 /* HorizontalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3660412255CF591006E8F38 /* HorizontalPickerView.swift */; };
 		A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF57255C1FFE00C72F7B /* HomeHeaderCell.swift */; };
 		A394CF5A255C1FFE00C72F7B /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A394CF58255C1FFE00C72F7B /* HomeHeaderCell.xib */; };
 		A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */; };
@@ -48,6 +53,11 @@
 
 /* Begin PBXFileReference section */
 		09CAAD2D0D7124DA14EA0445 /* Pods-AmongUs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmongUs.debug.xcconfig"; path = "Target Support Files/Pods-AmongUs/Pods-AmongUs.debug.xcconfig"; sourceTree = "<group>"; };
+		A331B8AF255D2A2000C66A30 /* CreateCharaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCharaterCell.swift; sourceTree = "<group>"; };
+		A331B8B0255D2A2000C66A30 /* CreateCharaterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCharaterCell.xib; sourceTree = "<group>"; };
+		A331B8B6255D46F000C66A30 /* CreateTextSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTextSizeCell.swift; sourceTree = "<group>"; };
+		A331B8B7255D46F000C66A30 /* CreateTextSizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTextSizeCell.xib; sourceTree = "<group>"; };
+		A3660412255CF591006E8F38 /* HorizontalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPickerView.swift; sourceTree = "<group>"; };
 		A394CF57255C1FFE00C72F7B /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		A394CF58255C1FFE00C72F7B /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
@@ -111,6 +121,54 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A331B8AB255D29CE00C66A30 /* CreateCharacterCell */ = {
+			isa = PBXGroup;
+			children = (
+				A331B8AF255D2A2000C66A30 /* CreateCharaterCell.swift */,
+				A331B8B0255D2A2000C66A30 /* CreateCharaterCell.xib */,
+			);
+			path = CreateCharacterCell;
+			sourceTree = "<group>";
+		};
+		A331B8AC255D29DA00C66A30 /* CreateTextFontCell */ = {
+			isa = PBXGroup;
+			children = (
+				A331B8B5255D46D100C66A30 /* CreateTextSizeCell */,
+			);
+			path = CreateTextFontCell;
+			sourceTree = "<group>";
+		};
+		A331B8AD255D29E500C66A30 /* CreateBackgroundCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateBackgroundCell;
+			sourceTree = "<group>";
+		};
+		A331B8AE255D29ED00C66A30 /* CreateBorderCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateBorderCell;
+			sourceTree = "<group>";
+		};
+		A331B8B5255D46D100C66A30 /* CreateTextSizeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A331B8B6255D46F000C66A30 /* CreateTextSizeCell.swift */,
+				A331B8B7255D46F000C66A30 /* CreateTextSizeCell.xib */,
+			);
+			path = CreateTextSizeCell;
+			sourceTree = "<group>";
+		};
+		A3660411255CF561006E8F38 /* HorizontalPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A3660412255CF591006E8F38 /* HorizontalPickerView.swift */,
+			);
+			path = HorizontalPickerView;
+			sourceTree = "<group>";
+		};
 		A394CF53255C1C2700C72F7B /* HomeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +218,11 @@
 		A394CF70255C477300C72F7B /* CreateVC */ = {
 			isa = PBXGroup;
 			children = (
+				A331B8AE255D29ED00C66A30 /* CreateBorderCell */,
+				A331B8AD255D29E500C66A30 /* CreateBackgroundCell */,
+				A331B8AC255D29DA00C66A30 /* CreateTextFontCell */,
 				A394CF71255C478E00C72F7B /* CreateVC.swift */,
+				A331B8AB255D29CE00C66A30 /* CreateCharacterCell */,
 			);
 			path = CreateVC;
 			sourceTree = "<group>";
@@ -231,6 +293,7 @@
 		A3BBC315255AF8860092CFBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3660411255CF561006E8F38 /* HorizontalPickerView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,7 +499,9 @@
 				A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */,
 				A3BBC30A255AF82F0092CFBE /* LaunchScreen.storyboard in Resources */,
 				A394CF5A255C1FFE00C72F7B /* HomeHeaderCell.xib in Resources */,
+				A331B8B9255D46F000C66A30 /* CreateTextSizeCell.xib in Resources */,
 				A3BBC307255AF82F0092CFBE /* Assets.xcassets in Resources */,
+				A331B8B2255D2A2000C66A30 /* CreateCharaterCell.xib in Resources */,
 				A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */,
 				A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */,
 			);
@@ -477,6 +542,7 @@
 				A3BBC326255AFA1A0092CFBE /* HomeVC.swift in Sources */,
 				A3BBC32F255AFA430092CFBE /* SettingVC.swift in Sources */,
 				A3BBC349255AFB350092CFBE /* UIFont+Ext.swift in Sources */,
+				A331B8B1255D2A2000C66A30 /* CreateCharaterCell.swift in Sources */,
 				A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */,
 				A3BBC34F255AFB350092CFBE /* String+Ext.swift in Sources */,
 				A3BBC352255AFB350092CFBE /* CAAnimation+Ext.swift in Sources */,
@@ -493,12 +559,14 @@
 				A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */,
 				A3BBC354255AFB350092CFBE /* UIViewController+Ext.swift in Sources */,
 				A3BBC34E255AFB350092CFBE /* Font+Ext.swift in Sources */,
+				A3660413255CF591006E8F38 /* HorizontalPickerView.swift in Sources */,
 				A394CF6A255C245400C72F7B /* HomeItemCell.swift in Sources */,
 				A3BBC332255AFA730092CFBE /* BaseVC.swift in Sources */,
 				A3BBC350255AFB350092CFBE /* UIColor+Ext.swift in Sources */,
 				A3BBC347255AFB350092CFBE /* IBDesignable+Ext.swift in Sources */,
 				A3BBC351255AFB350092CFBE /* Color+Ext.swift in Sources */,
 				A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */,
+				A331B8B8255D46F000C66A30 /* CreateTextSizeCell.swift in Sources */,
 				A3BBC353255AFB350092CFBE /* UserDefaults+Ext.swift in Sources */,
 				A3BBC359255AFB5A0092CFBE /* Constants.swift in Sources */,
 				A394CF65255C222A00C72F7B /* HomeTitleCell.swift in Sources */,
@@ -578,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -633,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -651,7 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = AmongUs/Helpers/Assets/Assets.xcassets;
-				DEVELOPMENT_TEAM = RN7Y92Z642;
+				DEVELOPMENT_TEAM = NHTJ2N482N;
 				INFOPLIST_FILE = AmongUs/Helpers/Plists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,7 +740,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = AmongUs/Helpers/Assets/Assets.xcassets;
-				DEVELOPMENT_TEAM = RN7Y92Z642;
+				DEVELOPMENT_TEAM = NHTJ2N482N;
 				INFOPLIST_FILE = AmongUs/Helpers/Plists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

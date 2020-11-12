@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,9 +78,31 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijn-Z6-YHC">
                                 <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nD6-3Y-ngV" customClass="AKPickerView" customModule="AmongUs" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="0.0" width="334" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="7sK-KU-EFK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyq-Or-2Vv">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="jTP-lB-wF7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="EMS-WS-gNV"/>
+                                    <constraint firstItem="nD6-3Y-ngV" firstAttribute="top" secondItem="ijn-Z6-YHC" secondAttribute="top" id="KxD-0e-Iqa"/>
+                                    <constraint firstAttribute="trailing" secondItem="nD6-3Y-ngV" secondAttribute="trailing" constant="40" id="SFu-t1-ZOd"/>
+                                    <constraint firstItem="Hyq-Or-2Vv" firstAttribute="leading" secondItem="ijn-Z6-YHC" secondAttribute="leading" id="WhS-Fa-MCD"/>
+                                    <constraint firstItem="nD6-3Y-ngV" firstAttribute="leading" secondItem="ijn-Z6-YHC" secondAttribute="leading" constant="40" id="Zai-7A-xl7"/>
+                                    <constraint firstItem="Hyq-Or-2Vv" firstAttribute="top" secondItem="nD6-3Y-ngV" secondAttribute="bottom" id="aVe-bI-emQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hyq-Or-2Vv" secondAttribute="trailing" id="dK0-C9-aLM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPw-1v-KAa">
@@ -91,6 +113,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                                 <state key="normal" image="iconsArrow"/>
+                                <connections>
+                                    <action selector="onPressBack:" destination="Ew3-uG-COx" eventType="touchUpInside" id="rYb-OK-sHu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUSTOM LIVE WALLPAPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-Pq-QTV">
                                 <rect key="frame" x="131" y="59" width="152" height="30.5"/>
@@ -128,6 +153,10 @@
                             <constraint firstItem="mPw-1v-KAa" firstAttribute="top" secondItem="4w3-xy-gCY" secondAttribute="top" constant="15" id="tXS-Iv-le1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPreview" destination="hIR-54-j7w" id="qQ9-0h-o4K"/>
+                        <outlet property="vPicker" destination="nD6-3Y-ngV" id="PbX-1F-7MH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hI-w4-sCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
