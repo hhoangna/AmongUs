@@ -96,7 +96,7 @@ class HomeVC: BaseVC {
                 
                 section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = 16
-                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 24, bottom: 44, trailing: 24)
                 let headerSize = NSCollectionLayoutSize(widthDimension: .absolute((self.clvContent.frame.size.width)),
                                                       heightDimension: .estimated(30))
                 let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
@@ -148,6 +148,8 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         switch sec {
         case .Header:
             let cell: HomeHeaderCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCell.identifierCell, for: indexPath) as! HomeHeaderCell
+            
+            cell.lblTitle.text = "HOME"
             
             return cell
         default:

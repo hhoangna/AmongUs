@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmaticSC-Bold.ttf">
+            <string>AmaticSC-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SettingPremiumCell" customModule="AmongUs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="349"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="349"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bannerPremium" translatesAutoresizingMaskIntoConstraints="NO" id="ztX-Q9-5HP">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="349"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-uQ-ksS" customClass="CustomView" customModule="AmongUs" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULLY APP UNLOCK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VML-Pd-L62">
+                                <rect key="frame" x="102" y="30" width="135.5" height="35.5"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Premium to save live wallpaper to your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-gR-A7b">
+                                <rect key="frame" x="25" y="77.5" width="289" height="23"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Obr-gR-A7b" firstAttribute="leading" secondItem="ehw-uQ-ksS" secondAttribute="leading" constant="25" id="6ek-Ge-P0N"/>
+                            <constraint firstItem="Obr-gR-A7b" firstAttribute="top" secondItem="VML-Pd-L62" secondAttribute="bottom" constant="12" id="Bfu-Es-y48"/>
+                            <constraint firstItem="VML-Pd-L62" firstAttribute="top" secondItem="ehw-uQ-ksS" secondAttribute="top" constant="30" id="PiG-fH-4Yk"/>
+                            <constraint firstItem="VML-Pd-L62" firstAttribute="centerX" secondItem="ehw-uQ-ksS" secondAttribute="centerX" id="Tg2-px-GMv"/>
+                            <constraint firstItem="Obr-gR-A7b" firstAttribute="centerX" secondItem="ehw-uQ-ksS" secondAttribute="centerX" id="dec-pF-2sK"/>
+                            <constraint firstAttribute="height" constant="200" id="xTL-B7-zyu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ehw-uQ-ksS" secondAttribute="trailing" id="D5U-pQ-Zwm"/>
+                <constraint firstAttribute="trailing" secondItem="ztX-Q9-5HP" secondAttribute="trailing" id="RDH-JO-5jc"/>
+                <constraint firstItem="ztX-Q9-5HP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="U7q-Cb-jAl"/>
+                <constraint firstItem="ztX-Q9-5HP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dzc-Mj-1x3"/>
+                <constraint firstItem="ehw-uQ-ksS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="npO-vP-L2M"/>
+                <constraint firstItem="ehw-uQ-ksS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w5t-Ib-o6H"/>
+                <constraint firstAttribute="bottom" secondItem="ztX-Q9-5HP" secondAttribute="bottom" id="y4u-M1-eXD"/>
+                <constraint firstItem="ehw-uQ-ksS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zSb-gf-Jvd"/>
+            </constraints>
+            <size key="customSize" width="339" height="349"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="14"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="347.10144927536237" y="234.70982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_bannerPremium" width="327" height="327"/>
+    </resources>
+</document>

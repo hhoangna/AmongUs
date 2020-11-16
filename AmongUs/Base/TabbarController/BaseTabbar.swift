@@ -37,7 +37,7 @@ class BaseTabbar: UITabBarController {
         
         let settingVC: SettingVC = .load(SB: .Main)
         let settingNav = BaseNV(rootViewController: settingVC)
-        settingNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "iconsSetting"), selectedImage: #imageLiteral(resourceName: "iconsSetting"))
+        settingNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "iconsSetting"), selectedImage: #imageLiteral(resourceName: "iconsSetting-Selected"))
                 
 //        self.viewControllers = [homeNav, wallNav, stickerNav, settingNav]
         self.viewControllers = [homeNav, settingNav]

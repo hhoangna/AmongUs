@@ -9,6 +9,8 @@ import UIKit
 
 class HomeHeaderCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblTitle: UILabel!
+    
     static let identifierCell = "HomeHeaderCell"
 
     override func awakeFromNib() {

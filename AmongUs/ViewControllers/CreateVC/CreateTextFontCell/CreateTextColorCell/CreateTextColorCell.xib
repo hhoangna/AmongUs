@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreateTextColorCell" id="gTV-IL-0wX" customClass="CreateTextColorCell" customModule="AmongUs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="55" height="53"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="55" height="53"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPG-5b-aI7">
+                        <rect key="frame" x="6" y="6" width="43" height="41"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀅼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM5-NW-ar2">
+                        <rect key="frame" x="12" y="12" width="31" height="29"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="LPG-5b-aI7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="7Am-Li-iuX"/>
+                <constraint firstItem="LPG-5b-aI7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="83S-4n-pP0"/>
+                <constraint firstItem="tM5-NW-ar2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Flf-ax-YT4"/>
+                <constraint firstAttribute="trailing" secondItem="tM5-NW-ar2" secondAttribute="trailing" constant="12" id="KhY-iK-tJf"/>
+                <constraint firstItem="LPG-5b-aI7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="SXv-Ng-gjz"/>
+                <constraint firstAttribute="bottom" secondItem="LPG-5b-aI7" secondAttribute="bottom" constant="6" id="ccB-uo-rGc"/>
+                <constraint firstItem="tM5-NW-ar2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="jBb-4f-PC5"/>
+                <constraint firstItem="tM5-NW-ar2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="llx-1l-NFD"/>
+                <constraint firstAttribute="bottom" secondItem="tM5-NW-ar2" secondAttribute="bottom" constant="12" id="mgJ-9C-vhb"/>
+                <constraint firstItem="LPG-5b-aI7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="n53-2h-BOv"/>
+                <constraint firstAttribute="trailing" secondItem="LPG-5b-aI7" secondAttribute="trailing" constant="6" id="sgT-Mv-eE2"/>
+                <constraint firstItem="tM5-NW-ar2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="w0i-vJ-gcT"/>
+            </constraints>
+            <size key="customSize" width="55" height="53"/>
+            <connections>
+                <outlet property="lblAdd" destination="tM5-NW-ar2" id="XLe-TL-1rc"/>
+                <outlet property="vColor" destination="LPG-5b-aI7" id="Puu-9s-RqL"/>
+            </connections>
+            <point key="canvasLocation" x="106.5217391304348" y="129.57589285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

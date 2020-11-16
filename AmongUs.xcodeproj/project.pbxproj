@@ -21,6 +21,17 @@
 		A394CF6A255C245400C72F7B /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF68255C245400C72F7B /* HomeItemCell.swift */; };
 		A394CF6B255C245400C72F7B /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A394CF69255C245400C72F7B /* HomeItemCell.xib */; };
 		A394CF72255C478E00C72F7B /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394CF71255C478E00C72F7B /* CreateVC.swift */; };
+		A39EEA59255EDE3A00981F62 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39EEA57255EDE3A00981F62 /* SettingItemCell.swift */; };
+		A39EEA5A255EDE3A00981F62 /* SettingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA58255EDE3A00981F62 /* SettingItemCell.xib */; };
+		A39EEA5F255EDFF300981F62 /* SettingPremiumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39EEA5D255EDFF300981F62 /* SettingPremiumCell.swift */; };
+		A39EEA60255EDFF300981F62 /* SettingPremiumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA5E255EDFF300981F62 /* SettingPremiumCell.xib */; };
+		A39EEA68255EF3FD00981F62 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA63255EF3FC00981F62 /* SF-Pro-Text-Heavy.otf */; };
+		A39EEA69255EF3FD00981F62 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA64255EF3FC00981F62 /* SF-Pro-Text-Medium.otf */; };
+		A39EEA6A255EF3FD00981F62 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA65255EF3FC00981F62 /* SF-Pro-Text-Semibold.otf */; };
+		A39EEA6B255EF3FD00981F62 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA66255EF3FD00981F62 /* SF-Pro-Text-Bold.otf */; };
+		A39EEA6C255EF3FD00981F62 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA67255EF3FD00981F62 /* SF-Pro-Text-Regular.otf */; };
+		A3ADC8342562D95B00E38E46 /* CreateTextColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8322562D95B00E38E46 /* CreateTextColorCell.swift */; };
+		A3ADC8352562D95B00E38E46 /* CreateTextColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */; };
 		A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */; };
 		A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */; };
 		A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BBC303255AF82E0092CFBE /* Main.storyboard */; };
@@ -67,6 +78,17 @@
 		A394CF68255C245400C72F7B /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		A394CF69255C245400C72F7B /* HomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		A394CF71255C478E00C72F7B /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
+		A39EEA57255EDE3A00981F62 /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
+		A39EEA58255EDE3A00981F62 /* SettingItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingItemCell.xib; sourceTree = "<group>"; };
+		A39EEA5D255EDFF300981F62 /* SettingPremiumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPremiumCell.swift; sourceTree = "<group>"; };
+		A39EEA5E255EDFF300981F62 /* SettingPremiumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPremiumCell.xib; sourceTree = "<group>"; };
+		A39EEA63255EF3FC00981F62 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		A39EEA64255EF3FC00981F62 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		A39EEA65255EF3FC00981F62 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		A39EEA66255EF3FD00981F62 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		A39EEA67255EF3FD00981F62 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		A3ADC8322562D95B00E38E46 /* CreateTextColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTextColorCell.swift; sourceTree = "<group>"; };
+		A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTextColorCell.xib; sourceTree = "<group>"; };
 		A3BBC2FA255AF82E0092CFBE /* AmongUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmongUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +155,7 @@
 		A331B8AC255D29DA00C66A30 /* CreateTextFontCell */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC8312562D93600E38E46 /* CreateTextColorCell */,
 				A331B8B5255D46D100C66A30 /* CreateTextSizeCell */,
 			);
 			path = CreateTextFontCell;
@@ -211,6 +234,11 @@
 			children = (
 				A394CF5F255C206300C72F7B /* AmaticSC-Bold.ttf */,
 				A394CF5E255C206300C72F7B /* AmaticSC-Regular.ttf */,
+				A39EEA66255EF3FD00981F62 /* SF-Pro-Text-Bold.otf */,
+				A39EEA63255EF3FC00981F62 /* SF-Pro-Text-Heavy.otf */,
+				A39EEA64255EF3FC00981F62 /* SF-Pro-Text-Medium.otf */,
+				A39EEA67255EF3FD00981F62 /* SF-Pro-Text-Regular.otf */,
+				A39EEA65255EF3FC00981F62 /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -218,13 +246,49 @@
 		A394CF70255C477300C72F7B /* CreateVC */ = {
 			isa = PBXGroup;
 			children = (
+				A331B8AB255D29CE00C66A30 /* CreateCharacterCell */,
 				A331B8AE255D29ED00C66A30 /* CreateBorderCell */,
 				A331B8AD255D29E500C66A30 /* CreateBackgroundCell */,
 				A331B8AC255D29DA00C66A30 /* CreateTextFontCell */,
 				A394CF71255C478E00C72F7B /* CreateVC.swift */,
-				A331B8AB255D29CE00C66A30 /* CreateCharacterCell */,
 			);
 			path = CreateVC;
+			sourceTree = "<group>";
+		};
+		A39EEA54255EDD1600981F62 /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				A39EEA56255EDD3500981F62 /* SettingPremiumCell */,
+				A39EEA55255EDD2D00981F62 /* SettingItemCell */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
+		A39EEA55255EDD2D00981F62 /* SettingItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				A39EEA57255EDE3A00981F62 /* SettingItemCell.swift */,
+				A39EEA58255EDE3A00981F62 /* SettingItemCell.xib */,
+			);
+			path = SettingItemCell;
+			sourceTree = "<group>";
+		};
+		A39EEA56255EDD3500981F62 /* SettingPremiumCell */ = {
+			isa = PBXGroup;
+			children = (
+				A39EEA5D255EDFF300981F62 /* SettingPremiumCell.swift */,
+				A39EEA5E255EDFF300981F62 /* SettingPremiumCell.xib */,
+			);
+			path = SettingPremiumCell;
+			sourceTree = "<group>";
+		};
+		A3ADC8312562D93600E38E46 /* CreateTextColorCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC8322562D95B00E38E46 /* CreateTextColorCell.swift */,
+				A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */,
+			);
+			path = CreateTextColorCell;
 			sourceTree = "<group>";
 		};
 		A3BBC2F1255AF82E0092CFBE = {
@@ -394,6 +458,7 @@
 		A3BBC323255AF95F0092CFBE /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				A39EEA54255EDD1600981F62 /* SettingCell */,
 				A3BBC32E255AFA430092CFBE /* SettingVC.swift */,
 			);
 			path = SettingVC;
@@ -494,15 +559,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39EEA68255EF3FD00981F62 /* SF-Pro-Text-Heavy.otf in Resources */,
 				A394CF66255C222A00C72F7B /* HomeTitleCell.xib in Resources */,
+				A3ADC8352562D95B00E38E46 /* CreateTextColorCell.xib in Resources */,
+				A39EEA6B255EF3FD00981F62 /* SF-Pro-Text-Bold.otf in Resources */,
 				A394CF6B255C245400C72F7B /* HomeItemCell.xib in Resources */,
 				A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */,
 				A3BBC30A255AF82F0092CFBE /* LaunchScreen.storyboard in Resources */,
+				A39EEA60255EDFF300981F62 /* SettingPremiumCell.xib in Resources */,
+				A39EEA5A255EDE3A00981F62 /* SettingItemCell.xib in Resources */,
 				A394CF5A255C1FFE00C72F7B /* HomeHeaderCell.xib in Resources */,
 				A331B8B9255D46F000C66A30 /* CreateTextSizeCell.xib in Resources */,
 				A3BBC307255AF82F0092CFBE /* Assets.xcassets in Resources */,
 				A331B8B2255D2A2000C66A30 /* CreateCharaterCell.xib in Resources */,
 				A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */,
+				A39EEA6C255EF3FD00981F62 /* SF-Pro-Text-Regular.otf in Resources */,
+				A39EEA6A255EF3FD00981F62 /* SF-Pro-Text-Semibold.otf in Resources */,
+				A39EEA69255EF3FD00981F62 /* SF-Pro-Text-Medium.otf in Resources */,
 				A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +628,7 @@
 				A3BBC329255AFA280092CFBE /* WallpaperVC.swift in Sources */,
 				A3BBC35D255AFBA20092CFBE /* BaseNV.swift in Sources */,
 				A3BBC355255AFB350092CFBE /* UIView+Ext.swift in Sources */,
+				A39EEA5F255EDFF300981F62 /* SettingPremiumCell.swift in Sources */,
 				A3BBC32C255AFA330092CFBE /* StickerVC.swift in Sources */,
 				A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */,
 				A3BBC354255AFB350092CFBE /* UIViewController+Ext.swift in Sources */,
@@ -566,8 +640,10 @@
 				A3BBC347255AFB350092CFBE /* IBDesignable+Ext.swift in Sources */,
 				A3BBC351255AFB350092CFBE /* Color+Ext.swift in Sources */,
 				A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */,
+				A3ADC8342562D95B00E38E46 /* CreateTextColorCell.swift in Sources */,
 				A331B8B8255D46F000C66A30 /* CreateTextSizeCell.swift in Sources */,
 				A3BBC353255AFB350092CFBE /* UserDefaults+Ext.swift in Sources */,
+				A39EEA59255EDE3A00981F62 /* SettingItemCell.swift in Sources */,
 				A3BBC359255AFB5A0092CFBE /* Constants.swift in Sources */,
 				A394CF65255C222A00C72F7B /* HomeTitleCell.swift in Sources */,
 			);

@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CreateTextSizeCell" customModule="AmongUs" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="378" height="51"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreateTextSizeCell" id="gTV-IL-0wX" customClass="CreateTextSizeCell" customModule="AmongUs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="51"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="51"/>
+                <rect key="frame" x="0.0" y="0.0" width="451" height="51"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀅐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dZ-hL-Cmg">
+                        <rect key="frame" x="16" y="17.5" width="19" height="16"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13.600000381469727"/>
+                        <color key="textColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.96078431372549022" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="twx-hW-zSf">
+                        <rect key="frame" x="46" y="10.5" width="244" height="31"/>
+                    </slider>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-tq-RSk">
+                        <rect key="frame" x="413" y="14.5" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="UjY-TT-OPa"/>
+                            <constraint firstAttribute="height" constant="22" id="w1D-U2-YfO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <state key="normal" title="􀌂">
+                            <color key="titleColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWV-J1-iXo">
+                        <rect key="frame" x="378" y="14.5" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="ETC-KV-jxw"/>
+                            <constraint firstAttribute="height" constant="22" id="h5Q-tZ-CgV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <state key="normal" title="􀌁">
+                            <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aym-vW-P1v">
+                        <rect key="frame" x="343" y="14.5" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="aN0-xU-KLd"/>
+                            <constraint firstAttribute="width" constant="22" id="ulV-ki-jNC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <state key="normal" title="􀌀">
+                            <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀅐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2u-nq-thi">
+                        <rect key="frame" x="300" y="17.5" width="19" height="16"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13.600000381469727"/>
+                        <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.96078431369999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybK-YL-66E">
+                        <rect key="frame" x="331" y="0.0" width="1" height="51"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="Sjs-A0-Kvr"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="378" height="51"/>
-            <point key="canvasLocation" x="375.36231884057975" y="134.93303571428569"/>
+            <constraints>
+                <constraint firstItem="eDU-tq-RSk" firstAttribute="leading" secondItem="PWV-J1-iXo" secondAttribute="trailing" constant="13" id="3v4-vK-o17"/>
+                <constraint firstItem="ybK-YL-66E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4DP-QC-vAB"/>
+                <constraint firstItem="6dZ-hL-Cmg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="4do-LX-Fk5"/>
+                <constraint firstItem="twx-hW-zSf" firstAttribute="leading" secondItem="6dZ-hL-Cmg" secondAttribute="trailing" constant="13" id="6KA-PG-ZFQ"/>
+                <constraint firstItem="W2u-nq-thi" firstAttribute="leading" secondItem="twx-hW-zSf" secondAttribute="trailing" constant="12" id="8l1-cE-5Fv"/>
+                <constraint firstItem="Aym-vW-P1v" firstAttribute="leading" secondItem="ybK-YL-66E" secondAttribute="trailing" constant="11" id="HAV-rj-1Rk"/>
+                <constraint firstItem="PWV-J1-iXo" firstAttribute="leading" secondItem="Aym-vW-P1v" secondAttribute="trailing" constant="13" id="NAV-kW-af6"/>
+                <constraint firstItem="6dZ-hL-Cmg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="PSC-eJ-5Gj"/>
+                <constraint firstAttribute="trailing" secondItem="eDU-tq-RSk" secondAttribute="trailing" constant="16" id="QlH-Vd-dk5"/>
+                <constraint firstItem="ybK-YL-66E" firstAttribute="leading" secondItem="W2u-nq-thi" secondAttribute="trailing" constant="12" id="S72-VE-l60"/>
+                <constraint firstItem="Aym-vW-P1v" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VN5-fi-3lz"/>
+                <constraint firstItem="eDU-tq-RSk" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VkO-8R-SUT"/>
+                <constraint firstAttribute="bottom" secondItem="ybK-YL-66E" secondAttribute="bottom" id="WeE-uk-7oW"/>
+                <constraint firstItem="W2u-nq-thi" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bhA-yv-y5u"/>
+                <constraint firstItem="PWV-J1-iXo" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bxU-A0-H0T"/>
+                <constraint firstItem="twx-hW-zSf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gpb-w8-NSX"/>
+            </constraints>
+            <size key="customSize" width="451" height="51"/>
+            <connections>
+                <outlet property="btnCenter" destination="PWV-J1-iXo" id="jt0-tG-9HJ"/>
+                <outlet property="btnLeft" destination="Aym-vW-P1v" id="Ifh-ua-RUG"/>
+                <outlet property="btnRight" destination="eDU-tq-RSk" id="JqC-A0-57P"/>
+                <outlet property="sliderSize" destination="twx-hW-zSf" id="PfS-aJ-chv"/>
+            </connections>
+            <point key="canvasLocation" x="-154.34782608695653" y="-71.316964285714278"/>
         </collectionViewCell>
     </objects>
 </document>
