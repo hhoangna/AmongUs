@@ -67,7 +67,11 @@ class CreateVC: BaseVC {
         clvContent.delegate = self
         clvContent.dataSource = self
         clvContent.register(UINib(nibName: CreateCharaterCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateCharaterCell.identifierCell)
-        clvContent.register(UINib(nibName: CreateCharaterCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateCharaterCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateTextSizeCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextSizeCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateTextFontCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextFontCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateTextColorCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextColorCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateLineCell.identifierCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateLineCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateLineCell.identifierCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CreateLineCell.identifierCell)
         clvContent.collectionViewLayout = createLayout(component: selectedComponent)
     }
     
@@ -94,26 +98,56 @@ class CreateVC: BaseVC {
                 guard let sectionKind = TextRow(rawValue: sectionIndex) else { return nil }
                 switch sectionKind {
                 case .Font:
-                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(32))
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
-                    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(32))
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(32))
                     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
+                    group.interItemSpacing = .fixed(16)
                     section = NSCollectionLayoutSection(group: group)
+                    section.orthogonalScrollingBehavior = .continuous
                     section.contentInsets = NSDirectionalEdgeInsets(top: 11, leading: 16, bottom: 12, trailing: 16)
-                default:
-                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(130))
+                case .Size:
+                    let width = self.clvContent.frame.size.width
+                    
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .fractionalHeight(1.0))
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                     
-                    let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(130))
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(51))
+                    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: itemGroup, count: 1)
+                    
+                    section = NSCollectionLayoutSection(group: group)
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+                    
+                    let headerSize = NSCollectionLayoutSize(widthDimension: .absolute((self.clvContent.frame.size.width)),
+                                                          heightDimension: .estimated(1))
+                    let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: headerSize,
+                        elementKind: UICollectionView.elementKindSectionHeader,
+                        alignment: .top)
+                    
+                    let footerSize = NSCollectionLayoutSize(widthDimension: .absolute((self.clvContent.frame.size.width)),
+                                                          heightDimension: .estimated(1))
+                    let footerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: footerSize,
+                        elementKind: UICollectionView.elementKindSectionFooter,
+                        alignment: .bottom)
+                    section.boundarySupplementaryItems = [headerSupplementary, footerSupplementary]
+                    
+                case .Color:
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(41), heightDimension: .absolute(41))
+                    let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
+                    itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(41), heightDimension: .absolute(41))
                     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
-                    group.interItemSpacing = .fixed(16)
+                    group.interItemSpacing = .fixed(12)
                     
                     section = NSCollectionLayoutSection(group: group)
                     section.orthogonalScrollingBehavior = .continuous
-                    section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 16, bottom: 20, trailing: 16)
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 16, bottom: 12, trailing: 16)
                 }
             default:
                 let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(130))
@@ -205,6 +239,26 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch selectedComponent {
+        case .Text, .Boder:
+            if kind == UICollectionView.elementKindSectionHeader {
+                let header: CreateLineCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateLineCell.identifierCell, for: indexPath) as! CreateLineCell
+                
+                return header
+            } else if kind == UICollectionView.elementKindSectionFooter {
+                let header: CreateLineCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CreateLineCell.identifierCell, for: indexPath) as! CreateLineCell
+                
+                return header
+            } else {
+                return UICollectionReusableView()
+            }
+        default:
+            return UICollectionReusableView()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch selectedComponent {
         case .Background, .Character:
@@ -215,11 +269,17 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
             let sec = TextRow(rawValue: indexPath.section)
             switch sec {
             case .Font:
-                return UICollectionViewCell()
+                let cell: CreateTextFontCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextFontCell.identifierCell, for: indexPath) as! CreateTextFontCell
+                
+                return cell
             case .Color:
-                return UICollectionViewCell()
+                let cell: CreateTextColorCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextColorCell.identifierCell, for: indexPath) as! CreateTextColorCell
+                
+                return cell
             default:
-                return UICollectionViewCell()
+                let cell: CreateTextSizeCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextSizeCell.identifierCell, for: indexPath) as! CreateTextSizeCell
+                
+                return cell
             }
         case .Boder:
             let sec = BorderRow(rawValue: indexPath.section)

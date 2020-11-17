@@ -32,6 +32,10 @@
 		A39EEA6C255EF3FD00981F62 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A39EEA67255EF3FD00981F62 /* SF-Pro-Text-Regular.otf */; };
 		A3ADC8342562D95B00E38E46 /* CreateTextColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8322562D95B00E38E46 /* CreateTextColorCell.swift */; };
 		A3ADC8352562D95B00E38E46 /* CreateTextColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */; };
+		A3ADC83B2564248700E38E46 /* CreateTextFontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8392564248700E38E46 /* CreateTextFontCell.swift */; };
+		A3ADC83C2564248700E38E46 /* CreateTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC83A2564248700E38E46 /* CreateTextFontCell.xib */; };
+		A3ADC842256431AB00E38E46 /* CreateLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC840256431AB00E38E46 /* CreateLineCell.swift */; };
+		A3ADC843256431AB00E38E46 /* CreateLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC841256431AB00E38E46 /* CreateLineCell.xib */; };
 		A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */; };
 		A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */; };
 		A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BBC303255AF82E0092CFBE /* Main.storyboard */; };
@@ -89,6 +93,10 @@
 		A39EEA67255EF3FD00981F62 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		A3ADC8322562D95B00E38E46 /* CreateTextColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTextColorCell.swift; sourceTree = "<group>"; };
 		A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTextColorCell.xib; sourceTree = "<group>"; };
+		A3ADC8392564248700E38E46 /* CreateTextFontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTextFontCell.swift; sourceTree = "<group>"; };
+		A3ADC83A2564248700E38E46 /* CreateTextFontCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTextFontCell.xib; sourceTree = "<group>"; };
+		A3ADC840256431AB00E38E46 /* CreateLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLineCell.swift; sourceTree = "<group>"; };
+		A3ADC841256431AB00E38E46 /* CreateLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateLineCell.xib; sourceTree = "<group>"; };
 		A3BBC2FA255AF82E0092CFBE /* AmongUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmongUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,13 +160,14 @@
 			path = CreateCharacterCell;
 			sourceTree = "<group>";
 		};
-		A331B8AC255D29DA00C66A30 /* CreateTextFontCell */ = {
+		A331B8AC255D29DA00C66A30 /* CreateTextCell */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC8382564244F00E38E46 /* CreateTextFontCell */,
 				A3ADC8312562D93600E38E46 /* CreateTextColorCell */,
 				A331B8B5255D46D100C66A30 /* CreateTextSizeCell */,
 			);
-			path = CreateTextFontCell;
+			path = CreateTextCell;
 			sourceTree = "<group>";
 		};
 		A331B8AD255D29E500C66A30 /* CreateBackgroundCell */ = {
@@ -246,10 +255,11 @@
 		A394CF70255C477300C72F7B /* CreateVC */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC83F2564318600E38E46 /* CreateLineCell */,
 				A331B8AB255D29CE00C66A30 /* CreateCharacterCell */,
 				A331B8AE255D29ED00C66A30 /* CreateBorderCell */,
 				A331B8AD255D29E500C66A30 /* CreateBackgroundCell */,
-				A331B8AC255D29DA00C66A30 /* CreateTextFontCell */,
+				A331B8AC255D29DA00C66A30 /* CreateTextCell */,
 				A394CF71255C478E00C72F7B /* CreateVC.swift */,
 			);
 			path = CreateVC;
@@ -289,6 +299,24 @@
 				A3ADC8332562D95B00E38E46 /* CreateTextColorCell.xib */,
 			);
 			path = CreateTextColorCell;
+			sourceTree = "<group>";
+		};
+		A3ADC8382564244F00E38E46 /* CreateTextFontCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC8392564248700E38E46 /* CreateTextFontCell.swift */,
+				A3ADC83A2564248700E38E46 /* CreateTextFontCell.xib */,
+			);
+			path = CreateTextFontCell;
+			sourceTree = "<group>";
+		};
+		A3ADC83F2564318600E38E46 /* CreateLineCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC840256431AB00E38E46 /* CreateLineCell.swift */,
+				A3ADC841256431AB00E38E46 /* CreateLineCell.xib */,
+			);
+			path = CreateLineCell;
 			sourceTree = "<group>";
 		};
 		A3BBC2F1255AF82E0092CFBE = {
@@ -559,6 +587,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3ADC83C2564248700E38E46 /* CreateTextFontCell.xib in Resources */,
 				A39EEA68255EF3FD00981F62 /* SF-Pro-Text-Heavy.otf in Resources */,
 				A394CF66255C222A00C72F7B /* HomeTitleCell.xib in Resources */,
 				A3ADC8352562D95B00E38E46 /* CreateTextColorCell.xib in Resources */,
@@ -573,6 +602,7 @@
 				A3BBC307255AF82F0092CFBE /* Assets.xcassets in Resources */,
 				A331B8B2255D2A2000C66A30 /* CreateCharaterCell.xib in Resources */,
 				A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */,
+				A3ADC843256431AB00E38E46 /* CreateLineCell.xib in Resources */,
 				A39EEA6C255EF3FD00981F62 /* SF-Pro-Text-Regular.otf in Resources */,
 				A39EEA6A255EF3FD00981F62 /* SF-Pro-Text-Semibold.otf in Resources */,
 				A39EEA69255EF3FD00981F62 /* SF-Pro-Text-Medium.otf in Resources */,
@@ -619,9 +649,11 @@
 				A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */,
 				A3BBC34F255AFB350092CFBE /* String+Ext.swift in Sources */,
 				A3BBC352255AFB350092CFBE /* CAAnimation+Ext.swift in Sources */,
+				A3ADC83B2564248700E38E46 /* CreateTextFontCell.swift in Sources */,
 				A3BBC348255AFB350092CFBE /* UITabbarItem+Ext.swift in Sources */,
 				A3BBC34A255AFB350092CFBE /* UIApplication+Ext.swift in Sources */,
 				A3BBC34B255AFB350092CFBE /* UITextView+Ext.swift in Sources */,
+				A3ADC842256431AB00E38E46 /* CreateLineCell.swift in Sources */,
 				A3BBC335255AFA8D0092CFBE /* BaseTabbar.swift in Sources */,
 				A394CF72255C478E00C72F7B /* CreateVC.swift in Sources */,
 				A3BBC34C255AFB350092CFBE /* UIImage+Ext.swift in Sources */,
