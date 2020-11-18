@@ -30,16 +30,14 @@ class CreateVC: BaseVC {
     }
     
     enum TextRow: Int, CaseIterable {
-        case Font
+        case Font = 0
         case Size
         case Color
     }
     
     enum BorderRow: Int, CaseIterable {
-        case Style
-        case Color
+        case Color = 0
         case Size
-        case Animation
     }
     
     @IBOutlet weak var vPicker: AKPickerView!
@@ -70,8 +68,11 @@ class CreateVC: BaseVC {
         clvContent.register(UINib(nibName: CreateTextSizeCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextSizeCell.identifierCell)
         clvContent.register(UINib(nibName: CreateTextFontCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextFontCell.identifierCell)
         clvContent.register(UINib(nibName: CreateTextColorCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateTextColorCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateBorderSizeCell.identifierCell, bundle: nil), forCellWithReuseIdentifier: CreateBorderSizeCell.identifierCell)
         clvContent.register(UINib(nibName: CreateLineCell.identifierCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateLineCell.identifierCell)
         clvContent.register(UINib(nibName: CreateLineCell.identifierCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CreateLineCell.identifierCell)
+        clvContent.register(UINib(nibName: CreateBorderHeaderCell.identifierCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateBorderHeaderCell.identifierCell)
+
         clvContent.collectionViewLayout = createLayout(component: selectedComponent)
     }
     
@@ -98,20 +99,18 @@ class CreateVC: BaseVC {
                 guard let sectionKind = TextRow(rawValue: sectionIndex) else { return nil }
                 switch sectionKind {
                 case .Font:
-                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(32))
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(32))
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
-                    let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(32))
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(32))
                     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
-                    group.interItemSpacing = .fixed(16)
                     section = NSCollectionLayoutSection(group: group)
+                    section.interGroupSpacing = 16
                     section.orthogonalScrollingBehavior = .continuous
-                    section.contentInsets = NSDirectionalEdgeInsets(top: 11, leading: 16, bottom: 12, trailing: 16)
-                case .Size:
-                    let width = self.clvContent.frame.size.width
-                    
-                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .fractionalHeight(1.0))
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16)
+                case .Size:                    
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                     
@@ -137,30 +136,60 @@ class CreateVC: BaseVC {
                     section.boundarySupplementaryItems = [headerSupplementary, footerSupplementary]
                     
                 case .Color:
-                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(41), heightDimension: .absolute(41))
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(41))
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
                     let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(41), heightDimension: .absolute(41))
                     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
-                    group.interItemSpacing = .fixed(12)
                     
                     section = NSCollectionLayoutSection(group: group)
+                    section.interGroupSpacing = 12
                     section.orthogonalScrollingBehavior = .continuous
-                    section.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 16, bottom: 12, trailing: 16)
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16)
                 }
             default:
-                let itemGroupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(130))
-                let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
-                itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-                
-                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(130))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
-                group.interItemSpacing = .fixed(16)
-                
-                section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 16, bottom: 20, trailing: 16)
+                guard let sectionKind = BorderRow(rawValue: sectionIndex) else { return nil }
+                switch sectionKind {
+                case .Color:
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(41))
+                    let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
+                    itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(41), heightDimension: .absolute(41))
+                    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
+                    
+                    section = NSCollectionLayoutSection(group: group)
+                    section.interGroupSpacing = 12
+                    section.orthogonalScrollingBehavior = .continuous
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 24, trailing: 16)
+                    
+                    let headerSize = NSCollectionLayoutSize(widthDimension: .absolute((self.clvContent.frame.size.width)),
+                                                          heightDimension: .estimated(30))
+                    let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: headerSize,
+                        elementKind: UICollectionView.elementKindSectionHeader,
+                        alignment: .top)
+                    section.boundarySupplementaryItems = [headerSupplementary]
+                case .Size:
+                    let itemGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+                    let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
+                    itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+                    
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(51))
+                    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: itemGroup, count: 1)
+                    
+                    section = NSCollectionLayoutSection(group: group)
+                    section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 24, trailing: 0)
+                    
+                    let headerSize = NSCollectionLayoutSize(widthDimension: .absolute((self.clvContent.frame.size.width)),
+                                                          heightDimension: .estimated(30))
+                    let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: headerSize,
+                        elementKind: UICollectionView.elementKindSectionHeader,
+                        alignment: .top)
+                    section.boundarySupplementaryItems = [headerSupplementary]
+                }
             }
 
             return section
@@ -176,6 +205,16 @@ class CreateVC: BaseVC {
     
     @IBAction func onPressBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func onPressCreate(_ sender: UIButton) {
+        let resultView: ResultView = .fromNib()
+        resultView.show()
+        resultView.callback = { result in
+            if !result {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }
 
@@ -229,8 +268,6 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
         case .Boder:
             let sec = BorderRow(rawValue: section)
             switch sec {
-            case .Style:
-                return 5
             case .Color:
                 return 20
             default:
@@ -242,7 +279,7 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch selectedComponent {
-        case .Text, .Boder:
+        case .Text:
             if kind == UICollectionView.elementKindSectionHeader {
                 let header: CreateLineCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateLineCell.identifierCell, for: indexPath) as! CreateLineCell
                 
@@ -253,6 +290,22 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
                 return header
             } else {
                 return UICollectionReusableView()
+            }
+        case .Boder:
+            let sec = BorderRow(rawValue: indexPath.section)
+            switch sec {
+            case .Color:
+                let header: CreateBorderHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateBorderHeaderCell.identifierCell, for: indexPath) as! CreateBorderHeaderCell
+                
+                header.lblTitle.text = "COLOR"
+                
+                return header
+            default:
+                let header: CreateBorderHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CreateBorderHeaderCell.identifierCell, for: indexPath) as! CreateBorderHeaderCell
+                
+                header.lblTitle.text = "BORDER SIZE"
+                
+                return header
             }
         default:
             return UICollectionReusableView()
@@ -284,12 +337,14 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
         case .Boder:
             let sec = BorderRow(rawValue: indexPath.section)
             switch sec {
-            case .Style:
-                return UICollectionViewCell()
             case .Color:
-                return UICollectionViewCell()
+                let cell: CreateTextColorCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextColorCell.identifierCell, for: indexPath) as! CreateTextColorCell
+                
+                return cell
             default:
-                return UICollectionViewCell()
+                let cell: CreateBorderSizeCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateBorderSizeCell.identifierCell, for: indexPath) as! CreateBorderSizeCell
+                
+                return cell
             }
         }
     }

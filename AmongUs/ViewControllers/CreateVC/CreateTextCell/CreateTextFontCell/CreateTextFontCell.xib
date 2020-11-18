@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4I-og-wbw">
-                        <rect key="frame" x="0.0" y="0.0" width="187" height="51"/>
-                        <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="73" y="15.5" width="41.5" height="20.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -26,12 +26,10 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="J4I-og-wbw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="J73-Qk-524"/>
-                <constraint firstAttribute="trailing" secondItem="J4I-og-wbw" secondAttribute="trailing" id="RgW-07-Lyj"/>
-                <constraint firstAttribute="bottom" secondItem="J4I-og-wbw" secondAttribute="bottom" id="VVe-Xm-182"/>
-                <constraint firstItem="J4I-og-wbw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="r3b-Z7-307"/>
+                <constraint firstItem="J4I-og-wbw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="28t-kA-dhO"/>
+                <constraint firstItem="J4I-og-wbw" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hd6-mk-i8i"/>
             </constraints>
             <size key="customSize" width="187" height="51"/>
             <userDefinedRuntimeAttributes>

@@ -36,6 +36,12 @@
 		A3ADC83C2564248700E38E46 /* CreateTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC83A2564248700E38E46 /* CreateTextFontCell.xib */; };
 		A3ADC842256431AB00E38E46 /* CreateLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC840256431AB00E38E46 /* CreateLineCell.swift */; };
 		A3ADC843256431AB00E38E46 /* CreateLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC841256431AB00E38E46 /* CreateLineCell.xib */; };
+		A3ADC84C25657C1900E38E46 /* CreateBorderSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC84A25657C1900E38E46 /* CreateBorderSizeCell.swift */; };
+		A3ADC84D25657C1900E38E46 /* CreateBorderSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC84B25657C1900E38E46 /* CreateBorderSizeCell.xib */; };
+		A3ADC85225657D1800E38E46 /* CreateBorderHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC85025657D1800E38E46 /* CreateBorderHeaderCell.swift */; };
+		A3ADC85325657D1900E38E46 /* CreateBorderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC85125657D1800E38E46 /* CreateBorderHeaderCell.xib */; };
+		A3ADC8572565879900E38E46 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8562565879900E38E46 /* ResultView.swift */; };
+		A3ADC85B256587A400E38E46 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC85A256587A400E38E46 /* ResultView.xib */; };
 		A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */; };
 		A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */; };
 		A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BBC303255AF82E0092CFBE /* Main.storyboard */; };
@@ -97,6 +103,12 @@
 		A3ADC83A2564248700E38E46 /* CreateTextFontCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTextFontCell.xib; sourceTree = "<group>"; };
 		A3ADC840256431AB00E38E46 /* CreateLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLineCell.swift; sourceTree = "<group>"; };
 		A3ADC841256431AB00E38E46 /* CreateLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateLineCell.xib; sourceTree = "<group>"; };
+		A3ADC84A25657C1900E38E46 /* CreateBorderSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBorderSizeCell.swift; sourceTree = "<group>"; };
+		A3ADC84B25657C1900E38E46 /* CreateBorderSizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateBorderSizeCell.xib; sourceTree = "<group>"; };
+		A3ADC85025657D1800E38E46 /* CreateBorderHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBorderHeaderCell.swift; sourceTree = "<group>"; };
+		A3ADC85125657D1800E38E46 /* CreateBorderHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateBorderHeaderCell.xib; sourceTree = "<group>"; };
+		A3ADC8562565879900E38E46 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		A3ADC85A256587A400E38E46 /* ResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
 		A3BBC2FA255AF82E0092CFBE /* AmongUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmongUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +192,8 @@
 		A331B8AE255D29ED00C66A30 /* CreateBorderCell */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC84925657C0000E38E46 /* CreateBorderSizeCell */,
+				A3ADC84825657BF700E38E46 /* CreateBorderHeaderCell */,
 			);
 			path = CreateBorderCell;
 			sourceTree = "<group>";
@@ -319,6 +333,33 @@
 			path = CreateLineCell;
 			sourceTree = "<group>";
 		};
+		A3ADC84825657BF700E38E46 /* CreateBorderHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC85025657D1800E38E46 /* CreateBorderHeaderCell.swift */,
+				A3ADC85125657D1800E38E46 /* CreateBorderHeaderCell.xib */,
+			);
+			path = CreateBorderHeaderCell;
+			sourceTree = "<group>";
+		};
+		A3ADC84925657C0000E38E46 /* CreateBorderSizeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC84A25657C1900E38E46 /* CreateBorderSizeCell.swift */,
+				A3ADC84B25657C1900E38E46 /* CreateBorderSizeCell.xib */,
+			);
+			path = CreateBorderSizeCell;
+			sourceTree = "<group>";
+		};
+		A3ADC8552565876200E38E46 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC8562565879900E38E46 /* ResultView.swift */,
+				A3ADC85A256587A400E38E46 /* ResultView.xib */,
+			);
+			path = ResultView;
+			sourceTree = "<group>";
+		};
 		A3BBC2F1255AF82E0092CFBE = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +426,7 @@
 		A3BBC315255AF8860092CFBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC8552565876200E38E46 /* ResultView */,
 				A3660411255CF561006E8F38 /* HorizontalPickerView */,
 			);
 			path = Views;
@@ -591,6 +633,8 @@
 				A39EEA68255EF3FD00981F62 /* SF-Pro-Text-Heavy.otf in Resources */,
 				A394CF66255C222A00C72F7B /* HomeTitleCell.xib in Resources */,
 				A3ADC8352562D95B00E38E46 /* CreateTextColorCell.xib in Resources */,
+				A3ADC84D25657C1900E38E46 /* CreateBorderSizeCell.xib in Resources */,
+				A3ADC85B256587A400E38E46 /* ResultView.xib in Resources */,
 				A39EEA6B255EF3FD00981F62 /* SF-Pro-Text-Bold.otf in Resources */,
 				A394CF6B255C245400C72F7B /* HomeItemCell.xib in Resources */,
 				A394CF60255C206300C72F7B /* AmaticSC-Regular.ttf in Resources */,
@@ -602,6 +646,7 @@
 				A3BBC307255AF82F0092CFBE /* Assets.xcassets in Resources */,
 				A331B8B2255D2A2000C66A30 /* CreateCharaterCell.xib in Resources */,
 				A394CF61255C206300C72F7B /* AmaticSC-Bold.ttf in Resources */,
+				A3ADC85325657D1900E38E46 /* CreateBorderHeaderCell.xib in Resources */,
 				A3ADC843256431AB00E38E46 /* CreateLineCell.xib in Resources */,
 				A39EEA6C255EF3FD00981F62 /* SF-Pro-Text-Regular.otf in Resources */,
 				A39EEA6A255EF3FD00981F62 /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -644,6 +689,7 @@
 			files = (
 				A3BBC326255AFA1A0092CFBE /* HomeVC.swift in Sources */,
 				A3BBC32F255AFA430092CFBE /* SettingVC.swift in Sources */,
+				A3ADC85225657D1800E38E46 /* CreateBorderHeaderCell.swift in Sources */,
 				A3BBC349255AFB350092CFBE /* UIFont+Ext.swift in Sources */,
 				A331B8B1255D2A2000C66A30 /* CreateCharaterCell.swift in Sources */,
 				A394CF59255C1FFE00C72F7B /* HomeHeaderCell.swift in Sources */,
@@ -660,6 +706,8 @@
 				A3BBC329255AFA280092CFBE /* WallpaperVC.swift in Sources */,
 				A3BBC35D255AFBA20092CFBE /* BaseNV.swift in Sources */,
 				A3BBC355255AFB350092CFBE /* UIView+Ext.swift in Sources */,
+				A3ADC84C25657C1900E38E46 /* CreateBorderSizeCell.swift in Sources */,
+				A3ADC8572565879900E38E46 /* ResultView.swift in Sources */,
 				A39EEA5F255EDFF300981F62 /* SettingPremiumCell.swift in Sources */,
 				A3BBC32C255AFA330092CFBE /* StickerVC.swift in Sources */,
 				A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */,
