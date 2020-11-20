@@ -42,6 +42,7 @@
 		A3ADC85325657D1900E38E46 /* CreateBorderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC85125657D1800E38E46 /* CreateBorderHeaderCell.xib */; };
 		A3ADC8572565879900E38E46 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8562565879900E38E46 /* ResultView.swift */; };
 		A3ADC85B256587A400E38E46 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3ADC85A256587A400E38E46 /* ResultView.xib */; };
+		A3ADC8C72566BA7100E38E46 /* PremiumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADC8C62566BA7100E38E46 /* PremiumVC.swift */; };
 		A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */; };
 		A3BBC300255AF82E0092CFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */; };
 		A3BBC305255AF82E0092CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BBC303255AF82E0092CFBE /* Main.storyboard */; };
@@ -109,6 +110,7 @@
 		A3ADC85125657D1800E38E46 /* CreateBorderHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateBorderHeaderCell.xib; sourceTree = "<group>"; };
 		A3ADC8562565879900E38E46 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		A3ADC85A256587A400E38E46 /* ResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		A3ADC8C62566BA7100E38E46 /* PremiumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumVC.swift; sourceTree = "<group>"; };
 		A3BBC2FA255AF82E0092CFBE /* AmongUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmongUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BBC2FD255AF82E0092CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BBC2FF255AF82E0092CFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +362,14 @@
 			path = ResultView;
 			sourceTree = "<group>";
 		};
+		A3ADC8C52566BA5A00E38E46 /* PremiumVC */ = {
+			isa = PBXGroup;
+			children = (
+				A3ADC8C62566BA7100E38E46 /* PremiumVC.swift */,
+			);
+			path = PremiumVC;
+			sourceTree = "<group>";
+		};
 		A3BBC2F1255AF82E0092CFBE = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +424,7 @@
 		A3BBC314255AF87F0092CFBE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3ADC8C52566BA5A00E38E46 /* PremiumVC */,
 				A394CF70255C477300C72F7B /* CreateVC */,
 				A3BBC323255AF95F0092CFBE /* SettingVC */,
 				A3BBC322255AF95A0092CFBE /* StickerVC */,
@@ -713,6 +724,7 @@
 				A3BBC2FE255AF82E0092CFBE /* AppDelegate.swift in Sources */,
 				A3BBC354255AFB350092CFBE /* UIViewController+Ext.swift in Sources */,
 				A3BBC34E255AFB350092CFBE /* Font+Ext.swift in Sources */,
+				A3ADC8C72566BA7100E38E46 /* PremiumVC.swift in Sources */,
 				A3660413255CF591006E8F38 /* HorizontalPickerView.swift in Sources */,
 				A394CF6A255C245400C72F7B /* HomeItemCell.swift in Sources */,
 				A3BBC332255AFA730092CFBE /* BaseVC.swift in Sources */,

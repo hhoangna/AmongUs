@@ -163,6 +163,17 @@ extension SettingVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        let sec = Section(rawValue: indexPath.section)
+        
+        switch sec {
+        case .Option:
+            break
+        case .Premium:
+            let vc: PremiumVC = .load(SB: .Main)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        default:
+            break
+        }
     }
 }
