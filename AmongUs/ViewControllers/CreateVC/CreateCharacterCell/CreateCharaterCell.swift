@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SDWebImagePDFCoder
 
 class CreateCharaterCell: UICollectionViewCell {
     
@@ -21,9 +22,11 @@ class CreateCharaterCell: UICollectionViewCell {
     }
     
     func setupIcon(icon: IconModel) {
+        let PDFCoder = SDImagePDFCoder.shared
+        SDImageCodersManager.shared.addCoder(PDFCoder)
+        let bitmapSize = CGSize(width: 90, height: 90)
         if let url = URL(string: icon.url) {
-            let image = Utils.shared.drawPDFfromURL(url: url)
-            imgCharacter.image = image
+            imgCharacter.sd_setImage(with: url, placeholderImage: nil, options: .continueInBackground, context: [.imageThumbnailPixelSize : bitmapSize])
         }
     }
 }

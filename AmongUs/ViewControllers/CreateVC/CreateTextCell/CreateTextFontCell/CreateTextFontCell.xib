@@ -37,6 +37,9 @@
                     <real key="value" value="8"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="lblTitle" destination="J4I-og-wbw" id="qIO-PW-E3L"/>
+            </connections>
             <point key="canvasLocation" x="202.17391304347828" y="128.90625"/>
         </collectionViewCell>
     </objects>

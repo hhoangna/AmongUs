@@ -47,6 +47,8 @@ class CreateVC: BaseVC {
     var selectedComponent: CreateComponent = .Character
     
     var listIcons: [IconModel] = []
+    var listFontsText: [FontText] = FontText.allCases
+    var listColorsText: [ColorText] = ColorText.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +117,7 @@ class CreateVC: BaseVC {
                     let itemGroup = NSCollectionLayoutItem(layoutSize: itemGroupSize)
                     itemGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
-                    let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(32))
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(32))
                     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemGroup])
                     section = NSCollectionLayoutSection(group: group)
                     section.interGroupSpacing = 16
@@ -273,9 +275,9 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
             let sec = TextRow(rawValue: section)
             switch sec {
             case .Font:
-                return 10
+                return listFontsText.count
             case .Color:
-                return 20
+                return listColorsText.count + 1
             default:
                 return 1
             }
@@ -345,9 +347,27 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
             case .Font:
                 let cell: CreateTextFontCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextFontCell.identifierCell, for: indexPath) as! CreateTextFontCell
                 
+                let font = listFontsText[indexPath.row]
+                cell.lblTitle.text = font.title
+                cell.lblTitle.font = UIFont(name: font.rawValue, size: 13)
+                
                 return cell
             case .Color:
                 let cell: CreateTextColorCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTextColorCell.identifierCell, for: indexPath) as! CreateTextColorCell
+                
+                cell.layer.cornerRadius = 20.5
+                cell.clipsToBounds = true
+                cell.vColor.layer.cornerRadius = 14.5
+                
+                let row = indexPath.row
+                if row == 0 {
+                    cell.lblAdd.isHidden = false
+                    cell.vColor.backgroundColor = .clear
+                } else {
+                    let color = listColorsText[row - 1]
+                    cell.lblAdd.isHidden = true
+                    cell.vColor.backgroundColor = UIColor(hex: color.rawValue)
+                }
                 
                 return cell
             default:

@@ -16,6 +16,7 @@ enum StatusCode: Int {
 
 typealias APIParams = [String: Any]
 typealias APICallback = (_ success: Bool, _ model: [String: Any]) -> Void
+typealias ResponseDictionary = [String: Any]
 
 class BaseAPI {
     static let shared = BaseAPI()

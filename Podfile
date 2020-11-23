@@ -9,5 +9,6 @@ target 'AmongUs' do
   pod 'Alamofire', '4.9.1'
   pod 'SDWebImage'
   pod 'ObjectMapper'
+  pod 'SDWebImagePDFCoder'
 
 end

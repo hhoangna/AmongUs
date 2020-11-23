@@ -64,5 +64,30 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sparkle Dream.ttf</string>
+		<string>CircularStd-Book.otf</string>
+		<string>SalesforceSans-Bold.ttf</string>
+		<string>r0c0i - Linotte Bold.ttf</string>
+		<string>CrimsonText-Regular.ttf</string>
+		<string>Courgette-Regular.ttf</string>
+		<string>Roundo-Regular.ttf</string>
+		<string>GloriaHallelujah-Regular.ttf</string>
+		<string>LibreBaskerville-Bold.ttf</string>
+		<string>AmaticSC-Bold.ttf</string>
+		<string>Nunito-Regular.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+		<string>Chilanka-Regular.ttf</string>
+		<string>Hello Valentina.ttf</string>
+		<string>Pangolin-Regular.ttf</string>
+		<string>Neucha-Regular.ttf</string>
+		<string>DavidLibre-Bold.ttf</string>
+		<string>GochiHand-Regular.ttf</string>
+		<string>Martel-Regular.ttf</string>
+		<string>Cardo-Bold.ttf</string>
+		<string>PermanentMarker-Regular.ttf</string>
+		<string>Satisfy-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
