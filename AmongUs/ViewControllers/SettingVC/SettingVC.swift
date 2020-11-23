@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SettingVC: BaseVC {
     
@@ -55,6 +56,11 @@ class SettingVC: BaseVC {
 
         // Do any additional setup after loading the view.
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     func setupCollectionView() {

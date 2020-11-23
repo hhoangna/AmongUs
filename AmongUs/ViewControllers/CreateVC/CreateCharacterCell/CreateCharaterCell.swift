@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CreateCharaterCell: UICollectionViewCell {
     
@@ -16,5 +17,13 @@ class CreateCharaterCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        layer.cornerRadius = 8
+    }
+    
+    func setupIcon(icon: IconModel) {
+        if let url = URL(string: icon.url) {
+            let image = Utils.shared.drawPDFfromURL(url: url)
+            imgCharacter.image = image
+        }
     }
 }

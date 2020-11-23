@@ -6,5 +6,8 @@ target 'AmongUs' do
   use_frameworks!
 
   # Pods for AmongUs
+  pod 'Alamofire', '4.9.1'
+  pod 'SDWebImage'
+  pod 'ObjectMapper'
 
 end

@@ -46,12 +46,24 @@ class CreateVC: BaseVC {
     
     var selectedComponent: CreateComponent = .Character
     
+    var listIcons: [IconModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupPickerView()
         setupCollectionView()
+        
+        fetchAllData()
+    }
+    
+    func fetchAllData() {
+        BaseAPI.shared.getListIconAmongUs { (success, list) in
+            self.listIcons = list ?? []
+            
+            self.clvContent.reloadData()
+        }
     }
     
     func setupPickerView() {
@@ -253,8 +265,10 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch selectedComponent {
-        case .Background, .Character:
+        case .Background:
             return 5
+        case .Character:
+            return listIcons.count
         case .Text:
             let sec = TextRow(rawValue: section)
             switch sec {
@@ -314,8 +328,15 @@ extension CreateVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch selectedComponent {
-        case .Background, .Character:
+        case .Background:
             let cell: CreateCharaterCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateCharaterCell.identifierCell, for: indexPath) as! CreateCharaterCell
+            
+            return cell
+        case .Character:
+            let cell: CreateCharaterCell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateCharaterCell.identifierCell, for: indexPath) as! CreateCharaterCell
+            
+            let icon = listIcons[indexPath.row]
+            cell.setupIcon(icon: icon)
             
             return cell
         case .Text:

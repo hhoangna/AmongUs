@@ -12,3 +12,9 @@ enum SBName: String {
     case Custom = "Custom"
     case Setting = "Setting"
 }
+
+struct SERVER_URL {
+    static var API: String = "http://178.128.178.232:8761/api/"
+}
+
+typealias ResponseDictionary = [String: Any]
